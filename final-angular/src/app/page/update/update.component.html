@@ -3,55 +3,50 @@
 <div *ngIf="user">
   <form (submit)="onSubmit($event)"
         action="">
-        <div class="form-group">
-          <input name="id"
-                 class="form-control"
-                 type="hidden"
-                 [(ngModel)]="user.id">
-        </div>
-        <div class="form-group">
-          <label for="">Name</label>
-          <input name="Name"
-                 class="form-control"
-                 type="text"
-                 [(ngModel)]="user.name">
-        </div>
-        <div class="form-group">
-          <label for="">Email</label>
-          <input name="email"
-                 type="email"
-                 class="form-control"
-                 [(ngModel)]="user.email">
-        </div>
-        <div class="form-group">
-          <label for="">Password</label>
-          <input name="password"
-                 type="password"
-                 class="form-control"
-                 [(ngModel)]="user.password">
-        </div>
-        <div class="form-group">
-          <label for="">Token</label>
-          <input name="token"
-                 type="token"
-                 class="form-control"
-                 [(ngModel)]="user.token">
-        </div>
-        <div class="form-group">
-          <label for="">Department</label>
-          <input name="department"
-                 type="text"
-                 class="form-control"
-                 [(ngModel)]="user.department">
-        </div>
-        <button class="btn btn-primary"
-                type="submit">
-          Add
-        </button>
+    <div class="form-group">
+      <input name="id"
+             class="form-control"
+             type="hidden"
+             [(ngModel)]="user.id">
+    </div>
+    <div class="form-group">
+      <label for="">Name</label>
+      <input name="Name"
+             class="form-control"
+             type="text"
+             [(ngModel)]="user.name">
+    </div>
+    <div class="form-group">
+      <label for="">Email</label>
+      <input name="email"
+             type="email"
+             class="form-control"
+             [(ngModel)]="user.email">
+    </div>
+    <div class="form-group">
+      <label for="">Password</label>
+      <input name="password"
+             type="password"
+             class="form-control"
+             [(ngModel)]="user.password">
+    </div>
+    <div class="form-group">
+      <label for="">Token</label>
+      <input name="token"
+             type="token"
+             class="form-control"
+             [(ngModel)]="user.token">
+    </div>
+    <div class="form-group">
+      <label for="">Department</label>
+      <input name="department"
+             type="text"
+             class="form-control"
+             [(ngModel)]="user.department">
+    </div>
+    <button class="btn btn-primary"
+            type="submit">
       Update
     </button>
-
   </form>
 </div>
-
-
