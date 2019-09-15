@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-12">
+    <input type="text"
+           class="form-control"
+           placeholder="search..."
+           [(ngModel)]="searchText">
+  </div>
+</div>
+<button [routerLink]="['/create']">Add</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>email</th>
+      <th>department</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of list$ | async | filter:searchText | sortbyname">
+      <td>{{employee.id}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.department}}</td>
+      <td>
+        <div class="btn-group">
+          <a class="btn btn-info"
+             [routerLink]="['update', employee.id]">Update</a>
+          <a class="btn btn-danger"
+             (click)="onDelete(employee.id)">Delete</a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>
+
+<!-- <th (click)="sortbyname ('id')">id</th>
+      <th (click)="sortbyname ('name')">name</th>
+      <th (click)="sortbyname ('email')">email</th>
+      <th (click)="sortbyname ('department')">department</th>
+      <th></th> -->
